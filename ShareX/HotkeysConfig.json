@@ -1,0 +1,57 @@
+{
+  "Hotkeys": [
+    {
+      "HotkeyInfo": {
+        "Hotkey": "PrintScreen, Alt",
+        "Win": false
+      },
+      "TaskSettings": {
+        "Description": "predef region, grayscale, PS1 action",
+        "Job": "LastRegion",
+        "UseDefaultAfterCaptureJob": false,
+        "AfterCaptureJob": "AddImageEffects, SaveImageToFile, PerformActions",
+        "UseDefaultGeneralSettings": false,
+        "GeneralSettings": {
+          "ShowAfterCaptureTasksForm": false,
+          "PopUpNotification": "None"
+        },
+        "UseDefaultImageSettings": false,
+        "ImageSettings": {
+          "ImageFormat": "JPEG",
+          "ImageJPEGQuality": 70,
+          "ImageEffectPresets": [
+            {
+              "Name": "Grayscale",
+              "Effects": [
+                {
+                  "$type": "ShareX.ImageEffectsLib.Grayscale, ShareX.ImageEffectsLib",
+                  "Value": 1.0,
+                  "Enabled": true
+                }
+              ]
+            }
+          ],
+          "SelectedImageEffectPreset": 0,
+          "ShowImageEffectsWindowAfterCapture": false
+        },
+        "UseDefaultCaptureSettings": false,
+        "CaptureSettings": {
+          "ShowCursor": false
+        },
+        "UseDefaultActions": false,
+        "ExternalPrograms": [
+          {
+            "IsActive": true,
+            "Name": "Rate-Artifact.ps1",
+            "Path": "%ProgramFiles%\\PowerShell\\7\\pwsh.exe",
+            "Args": "-NonInteractive -w Hidden -File \"C:\\Tools\\ShareX\\scripts\\Rate-Artifact.ps1\" %input",
+            "HiddenWindow": true,
+            "DeleteInputFile": false
+          }
+        ],
+        "WatchFolderEnabled": false,
+        "WatchFolderList": []
+      }
+    }
+  ]
+}
